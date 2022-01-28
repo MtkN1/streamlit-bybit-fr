@@ -149,7 +149,7 @@ def main():
             df = pd.DataFrame(fr_hist)
             st.line_chart(df)
             st.caption("DataFrame")
-            st.dataframe(df)
+            st.dataframe(df.sort_index(ascending=False))
 
 if __name__ == "__main__":
     main()
