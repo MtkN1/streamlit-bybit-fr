@@ -145,7 +145,7 @@ def main():
                         dt = datetime.datetime.fromisoformat(f"{t}+00:00").astimezone(datetime.timezone(datetime.timedelta(hours=9)))
                     else:
                         dt = datetime.datetime.fromisoformat(t)
-                    fr_hist[s["symbolName"]][dt] = float(item["value"]) * 1000
+                    fr_hist[s["symbolName"]][dt] = float(item["value"]) * 100
             df = pd.DataFrame(fr_hist)
             st.line_chart(df)
             st.caption("DataFrame")
